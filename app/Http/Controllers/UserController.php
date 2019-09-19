@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-     return UsersResource::collection(User::latest()->get());
+     return UsersResource::collection(User::latest()->paginate(6));
     }
 
     /**
@@ -35,9 +35,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return new UsersResource($user);
     }
 
     /**
@@ -47,9 +47,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,User $user)
     {
-        //
+        $user->update([
+            'name'=> $request->name,
+            'email'=> $request->email,
+        ]);
+        return response()->json(['msg'=>'updated','status'=> 202]);
     }
 
     /**

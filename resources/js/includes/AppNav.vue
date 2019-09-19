@@ -12,6 +12,9 @@
                 <router-link class="nav-link" href="#" v-if="logged"  :to="{name:'item-index'}" >Home </router-link>
             </li>
 
+<li class="nav-item ">
+                <router-link class="nav-link" href="#" v-if="logged"  :to="{name:'users'}" >Users </router-link>
+            </li>
 
         </ul>
          <ul class="navbar-nav ml-auto">

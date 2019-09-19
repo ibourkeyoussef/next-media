@@ -8,10 +8,9 @@ import Token from './Helpers/Token';
 import User from './Helpers/User';
 import  VeeValidate from 'vee-validate'
 import VueSpinners from 'vue-spinners'
-import ScrollLoader from 'vue-scroll-loader'
-
-Vue.use(ScrollLoader)
-
+import toastr from 'toastr';
+window.toastr = toastr;
+Vue.component('pagination', require('laravel-vue-pagination'));
 import infiniteScroll from 'vue-infinite-scroll'
 Vue.use(infiniteScroll)
 window.Token = Token;
@@ -19,6 +18,7 @@ window.User = User;
 Vue.use(VueSpinners)
 Vue.use(VueRouter);
 Vue.use(VeeValidate);
+
 
 
 
