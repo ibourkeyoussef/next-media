@@ -17,7 +17,7 @@ class ItemController extends Controller
     public function index()
     {
         return ItemsResource::collection(Item::latest()->get());
-
+// return Item::paginate(6);
     }
 
 

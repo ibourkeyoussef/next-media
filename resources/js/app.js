@@ -8,6 +8,12 @@ import Token from './Helpers/Token';
 import User from './Helpers/User';
 import  VeeValidate from 'vee-validate'
 import VueSpinners from 'vue-spinners'
+import ScrollLoader from 'vue-scroll-loader'
+
+Vue.use(ScrollLoader)
+
+import infiniteScroll from 'vue-infinite-scroll'
+Vue.use(infiniteScroll)
 window.Token = Token;
 window.User = User;
 Vue.use(VueSpinners)
