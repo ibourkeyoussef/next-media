@@ -1905,11 +1905,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -32068,24 +32063,6 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("ul", { staticClass: "navbar-nav ml-auto" }, [
-              _c(
-                "li",
-                { staticClass: "nav-item " },
-                [
-                  _vm.logged
-                    ? _c(
-                        "router-link",
-                        {
-                          staticClass: "nav-link ml-3 ",
-                          attrs: { href: "#", "active-class": "active" }
-                        },
-                        [_vm._v("Profil")]
-                      )
-                    : _vm._e()
-                ],
-                1
-              ),
-              _vm._v(" "),
               _c(
                 "li",
                 { staticClass: "nav-item" },
