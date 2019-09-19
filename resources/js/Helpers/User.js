@@ -12,8 +12,8 @@ class User {
         .catch(err => console.log('error: ', err))
     }
 
-    signUp(url, data) {
-        axios.post(`${url}/signup`, data)
+    signUp(data) {
+        axios.post(`http://localhost:8000/api/auth/signup`, data)
         .then(res => {
            window.location = '/login';
         })

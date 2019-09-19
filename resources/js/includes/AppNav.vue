@@ -13,7 +13,15 @@
             </li>
 
 
-            <li class="nav-item">
+        </ul>
+         <ul class="navbar-nav ml-auto">
+            <!-- Authentication Links -->
+            <li class="nav-item ">
+
+                <router-link class="nav-link ml-3 " href="#" active-class="active" v-if="logged" >Profil</router-link>
+
+            </li>
+           <li class="nav-item">
                 <router-link class="nav-link"  v-if="!logged" :to="{name:'login'}" >Login </router-link>
             <a v-else @click.prevent="signOut()" class="nav-link" href="#" role="button">Logout</a>
             </li>

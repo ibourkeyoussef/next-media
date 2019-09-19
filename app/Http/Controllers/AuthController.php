@@ -29,7 +29,7 @@ class AuthController extends Controller
         }
         return $this->respondWithToken($token);
     }
-    public function signUp(AuthRequest $request) {
+    public function signUp(Request $request) {
 
         User::create([
             'name' => $request->name,
